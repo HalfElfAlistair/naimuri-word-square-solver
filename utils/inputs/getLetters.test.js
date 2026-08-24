@@ -19,4 +19,10 @@ describe("getLetters", () => {
         const letters = await getLetters(rl, 4);
         expect(typeof letters).toBe("string");
     });
+
+    it("retries if amount of letters doesn't match size squared and returns correct amount on second attempt", async () => {
+        const rl = mockRl(["eeee", "eeeeddoonnnsssrv"]);
+        const letters = await getLetters(rl, 4);
+        expect(letters).toBe("eeeeddoonnnsssrv");
+    });
 })
