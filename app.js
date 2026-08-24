@@ -1,5 +1,6 @@
 import readline from "node:readline";
 import { getSize } from './utils/inputs/getSize.js';
+import { getLetters } from "./utils/inputs/getLetters.js";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -8,6 +9,7 @@ const rl = readline.createInterface({
 
 const runProcess = async () => {
     const size = await getSize(rl);
+    const letters = await getLetters(rl);
 
     rl.close();
 }
