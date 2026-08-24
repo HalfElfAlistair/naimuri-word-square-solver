@@ -25,4 +25,10 @@ describe("getLetters", () => {
         const letters = await getLetters(rl, 4);
         expect(letters).toBe("eeeeddoonnnsssrv");
     });
+
+    it("retries if letters contains invalid characters like numbers or punctuation returns correct input on second attempt", async () => {
+        const rl = mockRl(["eeeedd00nnnsssr^", "eeeeddoonnnsssrv"]);
+        const letters = await getLetters(rl, 4);
+        expect(letters).toBe("eeeeddoonnnsssrv");
+    });
 })
