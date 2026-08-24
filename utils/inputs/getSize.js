@@ -5,9 +5,9 @@ export const getSize = (rl) => {
             // converts to number
             let size = +sizeStr;
 
-            // checks if NaN, repeats the question if so
-            if (Number.isNaN(size)) {
-                console.log("Invalid size. Please enter a number.");
+            // checks if NaN, 0, or 1, repeats the question if so
+            if (Number.isNaN(size) || size < 2) {
+                console.log("Invalid size. Please enter a valid number greater than 1.");
                 resolve(getSize(rl))
             }
 
