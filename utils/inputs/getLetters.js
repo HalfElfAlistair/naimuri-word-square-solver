@@ -1,9 +1,10 @@
 export const getLetters = (rl, size) => {
     return new Promise((resolve) => {
         rl.question(`Enter ${size ** 2} letters: `, (letters) => {
-            // checks amount of letters and repeats question if not square of number input
-            if (letters.length !== size ** 2) {
-                console.log(`Invalid input: you entered ${letters.length} letters but need ${size ** 2}.`);
+            const regexp = new RegExp('[a-z|A-Z]' + '{' + size ** 2 + '}');
+            // checks input contains only letters, with the correct amount, and retries if false
+            if (!regexp.test(letters)) {
+                console.log(`Invalid input: you must enter ${size ** 2} letters, no numbers or special characters.`);
                 resolve(getLetters(rl, size));
             }
             resolve(letters);
