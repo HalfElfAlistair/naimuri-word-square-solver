@@ -16,7 +16,7 @@ const mockRl = (inputs) => {
 describe("getLetters", () => {
     it("returns a string", async () => {
         const rl = mockRl(["eeeeddoonnnsssrv"]);
-        const letters = await getLetters(rl);
+        const letters = await getLetters(rl, 4);
         expect(typeof letters).toBe("string");
     });
 })

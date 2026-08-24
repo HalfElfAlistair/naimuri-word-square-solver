@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 
 const runProcess = async () => {
     const size = await getSize(rl);
-    const letters = await getLetters(rl);
+    const letters = await getLetters(rl, size);
 
     rl.close();
 }
