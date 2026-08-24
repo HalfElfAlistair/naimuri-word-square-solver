@@ -1,5 +1,7 @@
-export const getLetters = (rl) => {
+export const getLetters = (rl, size) => {
     return new Promise((resolve) => {
-        resolve();
+        rl.question(`Enter ${size ** 2} letters: `, (letters) => {
+            resolve(letters);
+        })
     })
 }
