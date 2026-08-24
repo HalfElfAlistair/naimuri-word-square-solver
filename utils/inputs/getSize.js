@@ -5,6 +5,12 @@ export const getSize = (rl) => {
             // converts to number
             let size = +sizeStr;
 
+            // checks if NaN, repeats the question if so
+            if (Number.isNaN(size)) {
+                console.log("Invalid size. Please enter a number.");
+                resolve(getSize(rl))
+            }
+
             // checks if integer, rounds and informs if not
             if (!Number.isInteger(size)) {
                 console.log("Entry must be an integer, your input has been rounded.")
