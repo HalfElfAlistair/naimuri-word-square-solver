@@ -26,5 +26,11 @@ describe("getSize", () => {
         expect(size).toBe(4);
     });
 
+    it("retries if NaN and returns an integer on second attempt", async () => {
+        const rl = mockRl(["A", "4"]);
+        const size = await getSize(rl);
+        expect(size).toBe(4);
+    });
+
 
 })
