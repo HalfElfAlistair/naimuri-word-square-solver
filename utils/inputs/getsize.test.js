@@ -32,5 +32,10 @@ describe("getSize", () => {
         expect(size).toBe(4);
     });
 
+    it("retries if negative integer and returns a positive one on second attempt", async () => {
+        const rl = mockRl(["-4", "4"]);
+        const size = await getSize(rl);
+        expect(size).toBe(4);
+    });
 
 })
