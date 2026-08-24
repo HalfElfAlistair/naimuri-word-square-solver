@@ -19,4 +19,12 @@ describe("getSize", () => {
         const size = await getSize(rl);
         expect(typeof size).toBe("number");
     });
+
+    it("returns an integer", async () => {
+        const rl = mockRl(["4.4"]);
+        const size = await getSize(rl);
+        expect(size).toBe(4);
+    });
+
+
 })
