@@ -1,0 +1,22 @@
+import { describe, it, expect } from 'vitest';
+import { getSize } from './getSize';
+
+// mocks input stage
+const mockRl = (inputs) => {
+  return {
+    // unused argument to ignore prompt
+    question(_, callback) {
+        // returns first item from input array
+        callback(inputs.shift());
+    },
+    close() {}
+  };
+}
+
+describe("getSize", () => {
+    it("returns a number", async () => {
+        const rl = mockRl(["4"]);
+        const size = await getSize(rl);
+        expect(typeof size).toBe("number");
+    });
+})
