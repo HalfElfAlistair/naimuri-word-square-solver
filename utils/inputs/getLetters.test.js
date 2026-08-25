@@ -20,8 +20,8 @@ describe("getLetters", () => {
         expect(typeof letters).toBe("string");
     });
 
-    it("retries if amount of letters doesn't match size squared and returns correct amount on second attempt", async () => {
-        const rl = mockRl(["eeee", "eeeeddoonnnsssrv"]);
+    it("retries if amount of letters doesn't match size squared and returns correct amount on valid attempt", async () => {
+        const rl = mockRl(["eeee", "eeeeddoonnnsssrvaaa", "eeeeddoonnnsssrv"]);
         const letters = await getLetters(rl, 4);
         expect(letters).toBe("eeeeddoonnnsssrv");
     });
