@@ -31,4 +31,10 @@ describe("getLetters", () => {
         const letters = await getLetters(rl, 4);
         expect(letters).toBe("eeeeddoonnnsssrv");
     });
+
+    it("ignores whitespace", async () => {
+        const rl = mockRl(["  eeeeddoonnnsssrv  ", "ee eeddo onn nss srv", "eee ddoo nnss rv", "eeeeddoonnnsssrv"]);
+        const letters = await getLetters(rl, 4);
+        expect(letters).toBe("eeeeddoonnnsssrv");
+    });
 })
