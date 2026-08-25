@@ -1,3 +1,3 @@
 export const lengthFilter = (size, words) => {
-    return [];
+    return words.filter(word => word.length === size);
 }
