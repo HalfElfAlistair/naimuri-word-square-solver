@@ -38,4 +38,10 @@ describe("getSize", () => {
         expect(size).toBe(4);
     });
 
+    it("ignores whitespace", async () => {
+        const rl = mockRl([" 4 "]);
+        const size = await getSize(rl);
+        expect(size).toBe(4);
+    });
+
 })
