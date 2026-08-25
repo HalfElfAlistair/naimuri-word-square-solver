@@ -20,4 +20,9 @@ describe("lengthFilter", () => {
         const filteredWords = await lengthFilter(4, words);
         expect(filteredWords.length).toBe(2);
     })
+
+    it("returns words in array that are the correct length", async () => {
+        const filteredWords = await lengthFilter(4, words);
+        expect(filteredWords.every(word => word.length === 4)).toBe(true);
+    })
 })
