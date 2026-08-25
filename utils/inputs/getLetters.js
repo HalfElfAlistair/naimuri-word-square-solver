@@ -7,7 +7,7 @@ export const getLetters = (rl, size) => {
                 console.log(`Invalid input: you must enter ${size ** 2} letters, no numbers or special characters.`);
                 resolve(getLetters(rl, size));
             }
-            resolve(letters);
+            resolve(letters.toLowerCase());
         })
     })
 }
