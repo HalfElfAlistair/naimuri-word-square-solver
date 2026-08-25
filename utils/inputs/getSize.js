@@ -2,7 +2,7 @@ export const getSize = (rl) => {
     return new Promise((resolve) => {
         // requests number or rows/columns
         rl.question("Enter the size of the square (e.g. 4): ", (sizeStr) => {
-            // converts to number
+            // converts to number, generally removing whitespace
             let size = +sizeStr;
 
             // checks if NaN, 0, or 1, repeats the question if so
