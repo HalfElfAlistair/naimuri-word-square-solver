@@ -20,4 +20,10 @@ describe("getSolution", () => {
         const solution = await getSolution(4, "eeeeddoonnnsssrv", wordsList);
         expect(solution).toEqual(["rose", "oven", "send", "ends"]);
     })
+
+    it("returns a message advising that the square can't be completed if the word square can't be built with the given letters input", async () => {
+        const wordsList = ["rose", "oven", "send", "rend"];
+        const solution = await getSolution(4, "eeeeddoonnnsssrv", wordsList);
+        expect(solution).toBe("A word square was not achievable, with the size and letters provided.");
+    })
 })
