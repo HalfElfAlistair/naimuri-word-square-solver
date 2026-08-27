@@ -31,7 +31,7 @@ export const getSolution = (size, letters, words) => {
         if (wordSquare) {
             return wordSquare;
         } else {
-            return
+            return 'A word square was not achievable, with the size and letters provided.';
         }
     }
 
