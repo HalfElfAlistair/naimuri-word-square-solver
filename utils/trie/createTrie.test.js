@@ -34,3 +34,12 @@ describe("updateRoot", () => {
         expect(ove.children.r.words).toEqual(["over"]);
     });
 })
+
+describe("getWordsWithPrefix", () => {
+    it("returns an array", async () => {
+        const trie = createTrie();
+        trie.updateRoot("rose");
+        const words = await trie.getWordsWithPrefix("ro");
+        expect(Array.isArray(words)).toBe(true);
+    })
+})
