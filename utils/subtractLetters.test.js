@@ -23,7 +23,7 @@ describe("subtractLetters", () => {
             v: 1
         }
         const newFrequency = subtractLetters(originalFrequency, word);
-        expect(typeof lettersFrequency).toBe("object");
+        expect(typeof newFrequency).toBe("object");
     })
 
     it("returns correct frequency values after update", async () => {
