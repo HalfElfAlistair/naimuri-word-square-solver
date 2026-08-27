@@ -18,7 +18,17 @@ export const createTrie = () => {
   };
 
   const getWordsWithPrefix = (prefix) => {
-    return [];
+    // node for this word becomes a reference to root, so mutatable, not just a copy
+    let node = root;
+    // loops through letters in provided prefix string
+    for (const letter of prefix) {
+        // locates the letter in the root children object
+        node = node.children[letter];
+        // if can't locate the letter in the root children object, returns an empty array
+        if (!node) return [];
+    }
+    // if a letter was found in the root children object, return the words array belonging to it
+    return node.words;
   };
 
   return { updateRoot, getWordsWithPrefix, root };
