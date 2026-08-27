@@ -7,4 +7,10 @@ describe("getColumnPrefix", () => {
         const prefix = await getColumnPrefix(rows);
         expect(typeof prefix).toBe("string");
     });
+
+    it("returns a string", async () => {
+        const rows = ["rose", "oven"];
+        const prefix = await getColumnPrefix(rows);
+        expect(prefix).toBe("se");
+    });
 })
