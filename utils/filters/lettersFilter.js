@@ -1,14 +1,6 @@
-export const lettersFilter = (letters, words) => {
+import { getLettersFrequency } from "../getLettersFrequency.js";
 
-    // Creates an object to show the frequency of each letter
-    const getLettersFrequency = () => {
-        const frequency = {};
-        for (const letter of letters) {
-            // if letter hasn't been added yet, set as 0. Increment letter value by one.
-            frequency[letter] = (frequency[letter] || 0) + 1;
-        }
-        return frequency;
-    };
+export const lettersFilter = (letters, words) => {
 
     const lettersFrequency = getLettersFrequency(letters);
 
@@ -24,5 +16,3 @@ export const lettersFilter = (letters, words) => {
         return true;
     });
 }
-
-lettersFilter("eeeeddoonnnsssrv", ["rose", "oven", "send", "ends"])
