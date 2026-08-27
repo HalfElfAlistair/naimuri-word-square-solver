@@ -42,4 +42,14 @@ describe("getWordsWithPrefix", () => {
         const words = await trie.getWordsWithPrefix("ro");
         expect(Array.isArray(words)).toBe(true);
     })
+
+    it("returns words matching a given prefix", () => {
+        const trie = createTrie();
+        trie.updateRoot("rose");
+        trie.updateRoot("road");
+        trie.updateRoot("robs");
+
+        expect(trie.getWordsWithPrefix("ro")).toEqual(["rose", "road", "robs"]);
+        expect(trie.getWordsWithPrefix("ros")).toEqual(["rose"]);
+    });
 })
