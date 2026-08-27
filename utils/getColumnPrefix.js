@@ -1,3 +1,3 @@
-const getColumnPrefix = (rows) => {
+export const getColumnPrefix = (rows) => {
     return;
 }
