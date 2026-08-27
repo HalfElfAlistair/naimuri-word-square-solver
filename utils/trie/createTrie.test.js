@@ -52,4 +52,12 @@ describe("getWordsWithPrefix", () => {
         expect(trie.getWordsWithPrefix("ro")).toEqual(["rose", "road", "robs"]);
         expect(trie.getWordsWithPrefix("ros")).toEqual(["rose"]);
     });
+
+    it("returns an empty array for unknown prefixes", () => {
+        const trie = createTrie();
+        trie.updateRoot("rose");
+
+        expect(trie.getWordsWithPrefix("z")).toEqual([]);
+        expect(trie.getWordsWithPrefix("rot")).toEqual([]);
+    });
 })
