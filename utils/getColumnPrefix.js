@@ -1,3 +1,3 @@
 export const getColumnPrefix = (rows) => {
-    return;
+    return "";
 }
