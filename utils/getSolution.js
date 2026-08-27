@@ -30,10 +30,7 @@ export const getSolution = (size, letters, words) => {
         const wordSquare = buildSquare([word], size, lettersLeft, trie);
         if (wordSquare) {
             return wordSquare;
-        } else {
-            return 'A word square was not achievable, with the size and letters provided.';
         }
     }
-
-    return filteredWordsByLetters;
+    return 'A word square was not achievable, with the size and letters provided.';
 }
