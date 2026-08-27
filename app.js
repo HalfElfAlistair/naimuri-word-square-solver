@@ -1,6 +1,8 @@
 import readline from "node:readline";
 import { getSize } from './utils/inputs/getSize.js';
 import { getLetters } from "./utils/inputs/getLetters.js";
+import { getSolution } from "./utils/getSolution.js";
+import { words } from './words.js';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,6 +12,14 @@ const rl = readline.createInterface({
 const runProcess = async () => {
     const size = await getSize(rl);
     const letters = await getLetters(rl, size);
+
+    console.log(`Attempting to solve ${size} x ${size} word square puzzle with the following letters: ${letters}`);
+    console.log('...')
+    console.log('...')
+    console.log('...')
+    
+    const result = getSolution(size, letters, words);
+    console.log(result);
 
     rl.close();
 }
