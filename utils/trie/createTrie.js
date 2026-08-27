@@ -18,8 +18,8 @@ export const createTrie = () => {
   };
 
   const getWordsWithPrefix = (prefix) => {
-    return;
+    return [];
   };
 
-  return { updateRoot, root };
+  return { updateRoot, getWordsWithPrefix, root };
 };
