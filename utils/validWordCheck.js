@@ -1,3 +1,3 @@
 export const validWordCheck = (word, frequency) => {
-    return;
+    return false;
 };
