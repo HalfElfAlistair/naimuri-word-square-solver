@@ -1,3 +1,4 @@
 export const getLettersFrequency = (letters) => {
-    return
+    const frequency = {};
+    return frequency;
 };
