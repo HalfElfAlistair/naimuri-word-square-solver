@@ -1,6 +1,6 @@
-import { getColumnPrefix } from './getColumnPrefix';
-import { validWordCheck } from './validWordCheck';
-import { subtractLetters } from './subtractLetters';
+import { getColumnPrefix } from './getColumnPrefix.js';
+import { validWordCheck } from './validWordCheck.js';
+import { subtractLetters } from './subtractLetters.js';
 
 export const buildSquare = (rows, size, lettersLeft, trie) => {
     // if the square has been successfully filled, return the array of rows and end the process
