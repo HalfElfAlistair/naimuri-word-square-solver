@@ -172,7 +172,7 @@ I used Copilot for a few tasks here.
 
 - To go through the process of setting up a tree, updating it, and checking prefixes for words.
 
-- For building the word square itself and understanding how the algorithm should work. I was hoping to work this one out myself and enjoyed trying to figure out a solution, but my approaches weren't getting anywhere so I decided I needed help working out where I was going wrong. In production this would have been much a quicker approach to begin with, but for this taks I wanted to take the time to attempt solving the puzzle myself, while time constraints were lesser.
+- For building the word square itself and understanding how the algorithm should work. I was hoping to work this one out myself and enjoyed trying to figure out a solution, but my approaches weren't getting anywhere so I decided I needed help working out where I was going wrong. In production this would have been much a quicker approach to begin with, but for this task I wanted to take the time to attempt solving the puzzle myself, while time constraints were lesser.
 
 - Helping me write the setup/running parts of this readme.
 
