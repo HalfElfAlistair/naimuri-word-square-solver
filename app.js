@@ -2,8 +2,7 @@ import readline from "node:readline";
 import { getSize } from './utils/inputs/getSize.js';
 import { getLetters } from "./utils/inputs/getLetters.js";
 import { getSolution } from "./utils/getSolution.js";
-// import { words } from './words.js';
-import { fetchDictionary } from "./fetchDictionary.js";
+import { fetchDictionary } from "./utils/fetchDictionary.js";
 
 const rl = readline.createInterface({
   input: process.stdin,
