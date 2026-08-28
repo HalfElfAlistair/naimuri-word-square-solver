@@ -2,7 +2,8 @@ import readline from "node:readline";
 import { getSize } from './utils/inputs/getSize.js';
 import { getLetters } from "./utils/inputs/getLetters.js";
 import { getSolution } from "./utils/getSolution.js";
-import { words } from './words.js';
+// import { words } from './words.js';
+import { fetchDictionary } from "./fetchDictionary.js";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -17,6 +18,9 @@ const runProcess = async () => {
     console.log('...')
     console.log('...')
     console.log('...')
+
+    const words = await fetchDictionary();
+    console.log('words count: ', words.length);
     
     const result = getSolution(size, letters, words);
     console.log(result);
