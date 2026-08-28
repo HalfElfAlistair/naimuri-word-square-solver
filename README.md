@@ -113,9 +113,9 @@ node --run start
 
 Once running, you’ll be prompted to enter:
 
-The size of the word square (e.g., 4)
+The size of the word square (e.g. 4)
 
-The letters available for the puzzle (e.g., eeeeddonnnsssrv)
+The letters available for the puzzle (e.g. eeeeddonnnsssrv)
 
 The program will then:
 
