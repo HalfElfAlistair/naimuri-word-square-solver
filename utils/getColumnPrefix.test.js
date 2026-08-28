@@ -8,7 +8,7 @@ describe("getColumnPrefix", () => {
         expect(typeof prefix).toBe("string");
     });
 
-    it("returns a string", async () => {
+    it("returns correct prefix for next word", async () => {
         const rows = ["rose", "oven"];
         const prefix = await getColumnPrefix(rows);
         expect(prefix).toBe("se");
